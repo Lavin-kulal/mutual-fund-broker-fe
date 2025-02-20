@@ -21,7 +21,7 @@ cd mutual-fund-broker-fe
 
 ### 2. Install Dependencies
 
-Install all required Node.js dependencies:
+Install all required dependencies:
 
 ```bash
 npm install
