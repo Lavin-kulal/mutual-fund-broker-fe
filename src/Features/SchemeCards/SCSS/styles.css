@@ -1,0 +1,220 @@
+/* Container for scheme cards */
+.scheme-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Styling for scheme cards */
+.scheme-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 calc(25% - 20px);
+          flex: 1 1 calc(25% - 20px); /* 4 cards per row */
+  max-width: calc(25% - 20px); /* 4 cards per row */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.scheme-card:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+/* Adjusting last row */
+.scheme-container .scheme-card:nth-last-child(2),
+.scheme-container .scheme-card:nth-last-child(1) {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 calc(50% - 20px);
+          flex: 1 1 calc(50% - 20px); /* 2 cards in the last row */
+  max-width: calc(50% - 20px); /* 2 cards in the last row */
+}
+
+/* Card Content */
+.scheme-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.scheme-category,
+.scheme-nav,
+.scheme-date {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+}
+
+.scheme-button {
+  margin-top: 15px;
+  padding: 10px 15px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.scheme-button:hover {
+  background-color: #0056b3;
+}
+
+/* Pagination Container */
+.footer-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+/* Pagination Header */
+.pagination-header {
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Dropdown Container */
+.dropdown-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.rows-per-page-dropdown {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Page Indicator */
+.no-pages-container {
+  font-size: 14px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Pagination Buttons */
+.arrows-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.arrows-container button {
+  padding: 8px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Active Buttons */
+.arrows-container button.enabled {
+  background-color: #007bff;
+}
+
+.arrows-container button.enabled:hover {
+  background-color: #0056b3;
+}
+
+/* Disabled Buttons */
+.arrows-container button.disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Responsive Pagination */
+@media (max-width: 768px) {
+  .footer-pagination {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+  }
+  .arrows-container {
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .rows-per-page-dropdown {
+    width: 100%;
+  }
+}
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .scheme-card {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 calc(33.33% - 20px);
+            flex: 1 1 calc(33.33% - 20px); /* 3 cards per row */
+    max-width: calc(33.33% - 20px); /* 3 cards per row */
+  }
+  .scheme-container .scheme-card:nth-last-child(2),
+  .scheme-container .scheme-card:nth-last-child(1) {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 calc(50% - 20px);
+            flex: 1 1 calc(50% - 20px); /* Keeping last row 2 cards */
+    max-width: calc(50% - 20px); /* Keeping last row 2 cards */
+  }
+}
+@media (max-width: 768px) {
+  .scheme-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .scheme-card {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    max-width: 100%;
+  }
+}/*# sourceMappingURL=styles.css.map */
