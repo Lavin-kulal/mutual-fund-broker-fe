@@ -92,4 +92,4 @@ Please refer to our contribution guidelines before submitting pull requests to t
 
 ## Contact
 
-For any questions or support, please contact the repository maintainer at [lavin.kulal@example.com](mailto:lavin.kulal@example.com).
+For any questions or support, please contact the repository maintainer at [laveenk0032@gmail.com](mailto:laveenk0032@gmail.com).
