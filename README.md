@@ -1,46 +1,95 @@
-# Getting Started with Create React App
+# Mutual Fund Broker Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains the frontend application for the Mutual Fund Broker system. Below are detailed instructions for setting up and running the project locally.
+
+## Prerequisites
+
+Before getting started, ensure you have the following installed on your system:
+- [Node.js](https://nodejs.org/) (v16.0.0 or higher recommended)
+- [Git](https://git-scm.com/)
+
+## Setup Instructions
+
+### 1. Clone the Repository
+
+Clone the repository using SSH:
+
+```bash
+git clone git@github.com:Lavin-kulal/mutual-fund-broker-fe.git
+cd mutual-fund-broker-fe
+```
+
+### 2. Install Dependencies
+
+Install all required Node.js dependencies:
+
+```bash
+npm install
+```
+
+This might take a few minutes depending on your internet connection and system performance.
+
+### 3. Run the Application
+
+Start the development server:
+
+```bash
+npm start
+```
+
+This will automatically open [http://localhost:3000](http://localhost:3000) in your default browser. The page will reload if you make edits to the source code.
+
+## Project Structure
+
+```
+mutual-fund-broker-fe/
+├── public/             # Public assets and HTML template
+├── src/                # Source code
+│   ├── components/     # Reusable UI components
+│   ├── pages/          # Application pages
+│   ├── context/        # React context providers
+│   ├── services/       # API services and utility functions
+│   ├── styles/         # CSS and styling files
+│   ├── App.js          # Main application component
+│   └── index.js        # Application entry point
+├── package.json        # Project dependencies and scripts
+└── README.md           # Project documentation
+```
 
 ## Available Scripts
 
 In the project directory, you can run:
 
 ### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Runs the app in development mode on [http://localhost:3000](http://localhost:3000)
 
 ### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in interactive watch mode
 
 ### `npm run build`
+Builds the app for production to the `build` folder, optimized for best performance
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `npm run lint`
+Runs ESLint to check for code quality issues
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Troubleshooting
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Common Issues
 
-### `npm run eject`
+1. **Node version incompatibility**
+   - Ensure you're using Node.js v16.0.0 or higher
+   - Use nvm (Node Version Manager) to switch between Node versions if needed
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. **Port 3000 already in use**
+   - If port 3000 is already in use, the CLI will ask if you want to use a different port
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. **Module not found errors**
+   - Try deleting the `node_modules` folder and `package-lock.json` file, then run `npm install` again
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Contributing
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Please refer to our contribution guidelines before submitting pull requests to the project.
 
-## Learn More
+## Contact
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+For any questions or support, please contact the repository maintainer at [lavin.kulal@example.com](mailto:lavin.kulal@example.com).
